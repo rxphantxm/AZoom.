@@ -110,7 +110,79 @@
 /* =================== ================= ========================*/
 
 
+/* =================== Price Tags ========================*/
+.rentalPriceSectionMain{
+    background-image: linear-gradient(#ffffff, rgb(88, 88, 88), #000); 
+    /*background-color: rgb(88, 88, 88);*/
+    padding: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
 
+.rentalPriceSection {
+    display: flex;
+}
+
+.pricecard {
+    text-align: center;
+    font-weight: bold;
+    background-color: #313131b0;
+    color: #000000;
+    box-shadow: 2px 2px 10px #777777;
+    border-top: 8px solid #000000;
+    border-radius: 4px;
+    padding: 16px 32px 32px 32px;
+    margin: 30px;
+    width: 600px;
+}
+
+.pricecard:hover {
+    border-top: 8px solid #05f7ff;
+    box-shadow: 0 4px 10px #05f7ff;
+    border-radius: 4px;
+    transform: translateY(-1em);
+    transition: all 0.2s ease-out;
+}
+
+.card__title {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-bottom: 8px;
+}
+
+.card__body {
+    position: relative;
+    border-top: 2px solid #777777;
+    border-bottom: 2px solid #777777;
+    padding-bottom: 16px;
+}
+
+.price {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 0 1px #000;
+    color: #fff;
+    padding-left: 24px;
+    margin: 32px 0;
+}
+
+.price__symbol {
+    position: absolute;
+    left: 0px;
+    top: 42px;
+    font-size: 1.5rem;
+}
+
+.price__tag {
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.pricecard:hover .price {
+    color: #05f7ff;;
+}
 
 
 /* ========================= FIND US ============================*/
@@ -140,8 +212,5 @@
 }
 
 
-
-
-/* =================== ================= ========================*/
 
 

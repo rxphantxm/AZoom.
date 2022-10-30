@@ -117,7 +117,8 @@
 
 /*========================= FILTERSS =========================*/
 .vehicleFilterArea{
-    padding: 60px;
+    margin-top: -185px;
+    padding: 30px;
     border-radius: 100px;
     width: 100px;
     font-family: 'Trebuchet MS', sans-serif;
@@ -131,9 +132,10 @@
     display: block;
     position: relative;
     padding-left: 35px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 15px;
+    font-weight: bold;
     user-select: none;
 }
 
