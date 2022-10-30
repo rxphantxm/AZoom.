@@ -1,0 +1,365 @@
+*{
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.userProfileMain {
+    position: relative;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(#151a24,#959595, #ffffff);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.userProfile_NavColumn{
+    width: 80%;
+    display: block;
+}
+.userProfile {
+    display: block;
+    position: relative;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(230, 230, 230) , rgb(255, 255, 255), rgb(255, 255, 255), rgb(230, 230, 230));
+    margin-top: 50px;
+    padding-top: 30px;
+    border-radius: 20px;
+}
+
+.profilePicture {
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+
+.profileInfo {
+    position: absolute;
+    text-align: left;
+    left: 3%;
+    top: 25%;
+}
+
+.userProfNav{
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid black;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+
+
+
+
+
+/*======================Booking Table=======================*/
+
+
+
+.responstable {
+    margin-top: 50px;
+    width: 80%;
+    font-size: 1.5em;
+    overflow: hidden;
+    text-transform: capitalize;
+
+    text-align: center;
+    border: 10px solid white;
+    border-radius: 20px;
+    border-collapse:collapse;
+  }
+
+  .responstable th {
+
+    background-color: #525252;
+    color: #FFF;
+    padding: 1em;
+  }
+  
+  
+  .responstable tr{
+    margin-bottom: 10px;
+
+
+  }
+
+  .responstable tr:nth-child(odd) {
+    background-color: #dedede;
+  }
+
+  .responstable tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+
+  .responstable td {
+    height: 100px;
+  }
+
+
+  .bookStatus {
+    text-align: left;
+  }
+  
+  
+  
+  
+  
+  
+  
+
+
+
+  .statusComplete{
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: rgb(101, 101, 101);
+    border-radius: 50%;
+  }
+  
+  .statusReturned{
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+  }
+  .statusOngoing{
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: rgb(0, 255, 4);
+    border-radius: 50%;
+  }
+
+
+  .paymentBTN {
+    width: inherit;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: rgb(38,184,138);
+    transition: .3s;
+    font-weight: bold;
+    font-size: 1em;
+  }
+
+
+  .paymentBTN:hover{
+    background-color: rgb(47, 223, 167);
+    box-shadow: 0 0 4px 0 rgb(52, 248, 186);
+  }
+
+
+
+.cancelBookingBTN{
+    width: inherit;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: rgb(199, 119, 119);
+    transition: .3s;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.cancelBookingBTN:hover {
+  background-color: rgb(189, 93, 93);
+  box-shadow: 0 0 4px 0 rgb(190, 90, 90);
+}
+
+
+/*===================================================*/
+
+
+#warningWindowOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000034;
+}
+
+.warningWindow{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.responstable_small {
+  margin: 50px;
+  width: 80%;
+  font-size: 1.5em;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 20px;
+  border-collapse:collapse;
+  text-transform: capitalize;
+}
+
+.responstable_small th {
+
+  background-color: #525252;
+  color: #FFF;
+  padding: 1em;
+}
+
+.responstable_small td {
+  border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#proceedToCancel{
+  color: black;
+  text-decoration: none;
+  background-color:rgb(38,184,138);
+  margin: 30px;
+  padding: 20px 30px;
+  border-radius: 2px;
+}
+
+#proceedToCancel:hover{
+  background-color: rgb(190, 90, 90);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===============================================*/
+.billOverlay{
+  z-index: 5;
+  width: 100%;
+  height: 100%; 
+  position: absolute;
+  top: 0;
+  display: none; /* flex */
+  background-color: rgba(0, 0, 0, 0.205);
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+}
+
+.inpsectionForm_FinalBill{
+  font-family: 'Trebuchet MS', sans-serif;
+  width: 500px;
+  background-color: rgb(240, 240, 240);
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  position: relative;
+}
+
+.billBreakdown {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+.billBreakdown img {
+  width: 100px;
+}
+
+.billingTable{
+  border: 1px solid black;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+}
+
+.billingTable th{
+  border: 1px solid #FFF;
+  background-color: #525252;
+  color: #FFF;
+  padding: 10px;
+}
+.billingTable td{
+  border: 1px solid #FFF;
+  background-color: #d3d3d3;
+  color: rgb(0, 0, 0);
+  padding: 3px;
+}
+
+
+
+.payment {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.zipNstate, .cardExpiry_CVV{
+  display: flex;
+  flex: 33.3%;
+  justify-content: space-around;
+}
+
+.cardExpiry_CVV div {
+display:flex;
+flex-direction: column;
+}
+
+.zipNstate div{
+display:flex;
+flex-direction: column;
+}
+
+.zipNstate input{
+  width: 100px;
+}
+
+.icon-container {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.cardExpiry_CVV input {
+  width: 100px;
+}
+
+
+#checkoutBTN {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  border: 2px solid rgb(68, 255, 77);
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  transition: .3s;
+}
+
+#checkoutBTN:hover {
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(68, 255, 77);
+}

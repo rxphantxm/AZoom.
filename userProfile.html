@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>User Profile</title>
+
+
+    <script src="https://kit.fontawesome.com/79eb1a849f.js" crossorigin="anonymous"></script>
+
+    <!-- Arvo Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+    <!-- YellowTail font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./css/tNav_Footer.css">
+    <link rel="stylesheet" href="./css/userProfile.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="topNavBar">
+
+            <!--Profile Button-->
+            <button onmouseout="btnCollapse()" onmouseover="btnExpand()" onclick="profileDropDown()"
+                class="profileButton" id="profileBTN"><i class="fa-solid fa-user"></i></button>
+            <div id="dropDownMenu" class="dropdown-content">
+                <h3>Hello <span class="userName_Display">Guest</span></h3>
+                <hr>
+                <div class="login_logout">
+                    <a id="btnToLogin" href="#">Login</a>
+                    <a class="userLoggedinBTN" id="btnToLogout" href="#" onclick="logout()">LogOut</a>
+                    <a class="userLoggedinBTN" id="btnToCheckBooking" href="#">My Bookings</a>
+                </div>
+            </div>
+
+
+            <a class="rentBTN" id="toHome" href="index.html"><i class="fa-solid fa-house"></i></a>
+
+        </div>
+
+
+
+
+
+        <div class="userProfileMain">
+            <div class="userProfile_NavColumn">
+                <div class="userProfile">
+                    <img class="profilePicture" src="./image/blank-profile-picture.png">
+                    <h2><span class="userName_Display"></span></h2>
+                    <h4>userID: 93847164</h4>
+                    <button id="showBooking" class=" userProfNav">Bookings</button>
+                    <div class="profileInfo">
+                        <h3>Name: <span>Doe, John</span></h3>
+                        <h3>Email: <span>johndoe34@yahoo.com</span></h3>
+                    </div>
+                </div>
+
+            </div>
+
+
+            
+            <table class="responstable">
+
+                <tr>
+                    <th class="sn">S/N</th>
+                    <th>Booking ID</th>
+                    <th>Rented Vehicle</th>
+                    <th>Pickup Location</th>
+                    <th>Start Date/Time</th>
+                    <th>End Date/Time</th>
+                    <th>Status</th>
+                    <th class="bookStatus"></th>
+                </tr>
+
+                <tr>
+                    <td class="sn">1</td>
+                    <td>32864246</td>
+                    <td>Hyundai Ionic</td>
+                    <td>Ang Mo Kio Branch</td>
+                    <td>09/05/2022<br>08:30PM</td>
+                    <td>10/08/2022<br>12:00PM</td>
+                    <td class="bookStatus"><div class="statusComplete"></div>Completed</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td class="sn">2</td>
+                    <td>74623947</td>
+                    <td>ForTwo EQ Premium Cabrio</td>
+                    <td>Ang Mo Kio Branch</td>
+                    <td>23/07/2022<br>12:30PM</td>
+                    <td>24/07/2022<br>08:30PM</td>
+                    <td class="bookStatus"><div class="statusComplete"></div>Completed</td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td class="sn">3</td>
+                    <td>92746593</td>
+                    <td>MG ZS</td>
+                    <td>Toa Payoh Branch</td>
+                    <td>26/10/2022<br>03:30PM</td>
+                    <td>27/10/2022<br>10:30AM</td>
+                    <td class="bookStatus"><div class="statusReturned"></div><span id="invoiceToPaid">Invoice Due</span></td>
+                    <td><button class="paymentBTN" onclick="openPaymentWindow()">Make Payment</button></td>
+                </tr>
+
+
+                <tr id="toBeCancelled">
+                    <td class="sn">4</td>
+                    <td>27598934</td>
+                    <td>Hyundai Kona</td>
+                    <td>Ang Mo Kio Branch</td>
+                    <td>07/11/2022<br>03:30PM</td>
+                    <td>07/11/2022<br>10:30PM</td>
+                    <td class="bookStatus"><div class="statusOngoing"></div>Booked</td>
+                    <td><button class="cancelBookingBTN" onclick="openCancelWindow()">Cancel Booking</button></td>
+                </tr>
+
+
+            </table>
+
+
+
+        </div>
+
+
+<!--=================================================================================================-->
+        <div id="warningWindowOverlay">
+            <div class="warningWindow">
+                <i class="fa-light fa-message-exclamation"></i>
+
+                <h3>Please do note that you are trying to cancel the following booking (s):</h3>
+
+                <table class="responstable_small">
+
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Rented Vehicle</th>
+                        <th>Pickup Location</th>
+                        <th>Start Date/Time</th>
+                        <th>End Date/Time</th>
+                    </tr>
+
+                    <tr>
+                        <td>27598934</td>
+                        <td>ForTwo EQ Premium Cabrio</td>
+                        <td>Ang Mo Kio Branch</td>
+                        <td>07/11/2022<br>03:30PM</td>
+                        <td>07/11/2022<br>10:30PM</td>
+                    </tr>
+
+                </table>
+
+                <small>Cancellation(s) made within 48Hours before booking commencement will result in forfeit of deposit.</small>
+                <a id="proceedToCancel"href="#" onclick="cancelBooking()">Proceed to Cancel</a>
+
+
+            </div>
+        </div>
+<!--======================================================================================================-->
+
+<div class="billOverlay">
+    <div class="inpsectionForm_FinalBill">
+        <div class="billBreakdown">
+            <img src="./image/AZoom.png">
+            <h3>Rental Breakdown</h3>
+            <div>
+                <p>Rentee Name: John Doe</p>
+                <p>Booking S/N: 92746593</p>
+            </div>
+
+            <table class="billingTable">
+                <tr>
+                    <th>Desc</th>
+                    <th>Cost</th>
+                </tr>
+                <tr>
+                    <td>Rental of Vehicle</td>
+                    <td>$80.00 SGD</td>
+                </tr>
+            </table>
+
+            <h4>Damage Control List</h4>
+            <table class="billingTable">
+                <tr>
+                    <th>Desc</th>
+                    <th>Cost</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
+        
+        <small>Total Amount Payable</small>
+        <h3>$80.00 SGD</h3>
+
+
+        <div class="payment">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            
+            <div class="cardExpiry_CVV">
+              <div>
+                <label for="expmonth">Exp Month</label>
+                <input type="text" id="expmonth" name="expmonth" placeholder="September">
+              </div>
+              <div>
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div>
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+
+            
+          </div>
+
+
+          <a href="#" id="checkoutBTN" onclick="makePayment()">Pay with Card</a>
+    </div>
+</div>
+
+
+        <script src="./js/script.js"></script>
+        <script src="./js/loginPopup.js"></script>
+        <script src="./js/userCancelBooking.js"></script>
+</body>
+
+</html>

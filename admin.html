@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Administrative Page</title>
+        
+
+        <script src="https://kit.fontawesome.com/79eb1a849f.js" crossorigin="anonymous"></script>
+
+        <!-- Arvo Font Import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    
+        <!-- YellowTail font import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="./css/tNav_Footer.css">
+        <link rel="stylesheet" href="./css/admin.css">
+    
+    </head>
+
+    <body>
+
+        <div class = "wrapper" style="justify-content: normal;">
+
+            <div class="topNavBar">
+    
+                <!--Profile Button-->
+                <button onmouseout="btnCollapse()" onmouseover="btnExpand()" onclick="profileDropDown()" class="profileButton" id="profileBTN" ><i class="fa-solid fa-user"></i></button>
+                <div id="dropDownMenu" class="dropdown-content">
+                    <a href="index.html" id="btnToLogout" onclick="logout()">Logout</a>
+                </div>
+    
+            </div>
+
+
+            <div class="bookingRecord">
+                <table class="responstable">
+    
+                    <tr>
+                        <th class="sn">Booking S/N</th>
+                        <th>Rentee</th>
+                        <th>Start Date/Time</th>
+                        <th>End Date/Time</th>
+                        <th class="bookStatus">Booking Status</th>
+                        <th class="inpectStatus">Inspection Status</th>
+                    </tr>
+                    
+                    <tr>
+                        <td class="sn">32864246</td>
+                        <td>Joyce, Lilliana</td>
+                        <td>08/05/2022, 05:30PM</td>
+                        <td>10/08/2022, 12:00PM</td>
+                        <td class="bookStatus"><div class="statusComplete"></div><span>Completed / Closed</span></td>
+                        <td class="inspectStatus"><button class="inspectBTNdisabled" disabled>Inspect / Final Bill</button></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="sn">74623947</td>
+                        <td>Roberts, August</td>
+                        <td>22/07/2022, 09:30AM</td>
+                        <td>23/07/2022, 08:30PM</td>
+                        <td class="bookStatus"><div class="statusComplete"></div><span>Completed / Closed</span></td>
+                        <td class="inspectStatus"><button class="inspectBTNdisabled" disabled>Inspect / Final Bill</button></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="sn">92746593</td>
+                        <td>Carroll, Ubaid</td>
+                        <td>28/10/2022, 12:30PM</td>
+                        <td>28/10/2022, 10:00PM</td>
+                        <td class="bookStatus"><div class="statusReturned"></div><span>Vehicle Returned</span></td>
+                        <td class="inspectStatus"><button class="inspectBTN" onclick="showBill()">Inspect / Final Bill</button></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="sn">27598934</td>
+                        <td>Gibbs, Hunter</td>
+                        <td>27/10/2022, 09:30AM</td>
+                        <td>29/10/2022, 05:30PM</td>
+                        <td class="bookStatus"><div class="statusOngoing"></div><span>Ongoing</span></td>
+                        <td class="inspectStatus"><button class="inspectBTNdisabled" disabled>Inspect / Final Bill</button></td>
+                    </tr>
+                    
+                </table>
+            </div>
+
+
+
+            <div class="billOverlay">
+                <div class="inpsectionForm_FinalBill">
+                    <div class="billBreakdown">
+                        <img src="./image/AZoom.png">
+                        <h3>Rental Breakdown</h3>
+                        <div>
+                            <p>Rentee Name: Carroll, Ubaid</p>
+                            <p>Booking S/N: 92746593</p>
+                        </div>
+
+                        <table class="billingTable">
+                            <tr>
+                                <th>Desc</th>
+                                <th>Cost</th>
+                            </tr>
+                            <tr>
+                                <td>Rental of Vehicle</td>
+                                <td>$80.00 SGD</td>
+                            </tr>
+                        </table>
+
+                        <h4>Damage Control List</h4>
+                        <table class="billingTable">
+                            <tr>
+                                <th>Desc</th>
+                                <th>Cost</th>
+                            </tr>
+                            <tr>
+                                <td>Dented Left Fender Panel</td>
+                                <td>$20.00 SGD</td>
+                            </tr>
+                            <tr>
+                                <td>Scratched Paint, F.Bumper</td>
+                                <td>$30.00 SGD</td>
+                            </tr>
+                            <tr>
+                                <td>Missing Rear of Car..WHERE IS IT??!</td>
+                                <td>$150000.00 SGD</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <small>Total Amount Payable</small>
+                    <h3>$150130.00 SGD</h3>
+
+                    <button class="processBillButton" onclick="sendBill()">Confirm Billing</button>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        <script src="./js/script.js"></script>
+        <script src="./js/admin.js"></script>
+        <script src="./js/loginPopup.js"></script>
+    </body>
+</html>

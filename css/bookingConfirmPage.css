@@ -1,0 +1,138 @@
+
+
+.paymentNbillingSection{
+    display: flex;
+}
+
+.paymentNbillingSection input{
+    margin:0 40px 20px 0;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 0;
+}
+
+.billing, .payment {
+    border-left: 1px solid black;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.zipNstate, .cardExpiry_CVV{
+    display: flex;
+    flex: 33.3%;
+    justify-content: space-around;
+}
+
+.cardExpiry_CVV div {
+  display:flex;
+  flex-direction: column;
+}
+
+.zipNstate div{
+  display:flex;
+  flex-direction: column;
+}
+
+.zipNstate input{
+    width: 100px;
+}
+
+.icon-container {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.cardExpiry_CVV input {
+    width: 100px;
+}
+
+
+#checkoutBTN {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    border: 2px solid rgb(68, 255, 77);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    transition: .3s;
+}
+
+#checkoutBTN:hover {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(68, 255, 77);
+  }
+
+
+/*=========================Popup Confirmation==============================*/
+.popupConfirmationOverlay {
+    z-index: 9;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    top: 0;
+    display: none; /* flex */
+    justify-content:center;
+    align-items: center;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.popupConfirmation-content{
+    height:fit-content;
+    width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .popupConfirmation-content h2 {
+    font-family: 'Yellowtail', cursive;
+    text-align: center;
+  }
+
+  .bookingSummary {
+    display: flex;
+  }
+
+  .bookingSummary div{
+    padding: 30px;
+  }
+
+  .confirmationBTN {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .confirmationBTN a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    transition: .3s;
+  }
+
+  .confirmationBTN .cancel {
+    border: 2px solid rgb(255, 68, 68);
+  }
+  
+  .confirmationBTN .cancel:hover {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 68, 68);
+  }
+
+
+  .confirmationBTN .pay {
+    border: 2px solid rgb(68, 255, 77);
+  }
+
+  .confirmationBTN .pay:hover {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(68, 255, 77);
+  }
+
+

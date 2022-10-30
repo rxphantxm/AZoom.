@@ -1,0 +1,225 @@
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+}
+
+body{
+    margin:0px;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+/*=================================== TOP NAV BAR ==================================== */
+.topNavBar{
+    height: 100px;
+    background-image: url("../image/electric-car-charging-station-front-view-electric-car-silhouette-with-green-glowing-dark-background-ev-concept_148087-350.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #151a24;
+    overflow: auto;
+    transition: all 0.3s;
+}
+
+
+#profileBTN {
+    margin: 20px;
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 16px;
+
+/* this create the slow lighting up effect hehe i like*/
+    transition: all 0.3s;
+}
+
+#profileBTN:hover {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px 0 white;
+}
+
+
+.dropdown-content {
+    font-family: 'Arvo', serif;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-bottom-right-radius: 16px;
+}
+       
+.dropdown-content a {
+    color: black;
+    font-size: 20px;
+    padding: 10px 0px 10px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.5s;
+}
+
+.dropdown-content a:hover {
+    transform: translateX(20px);
+}     
+.show {display: block;}
+
+
+#toRent {
+    float: right;
+    margin: 20px;
+    padding: 16px;
+    font-size: 20px;
+    font-family: 'Arvo', serif;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    position:relative;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+
+#toRent:after {
+    content: '»';
+    position: absolute;
+    color: #000;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.3s;
+}
+
+#toRent:hover{
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 white;
+    padding-right: 24px;
+    padding-left:8px;
+}
+#toRent a:hover{
+    color: #000;
+}
+
+#toRent:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+
+
+
+
+
+#toHome {
+    float: right;
+    margin: 20px;
+    padding: 16px;
+    font-size: 20px;
+    font-family: 'Arvo', serif;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    position:relative;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+
+#toHome:after {
+    content: '»';
+    position: absolute;
+    color: #000;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.3s;
+}
+
+#toHome:hover{
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 white;
+    padding-right: 24px;
+    padding-left:8px;
+}
+#toHome a:hover{
+    color: #000;
+}
+
+#toHome:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+
+
+
+/* =================== FOOTER ========================*/
+
+.footerItem{
+    background-color: #151a24;
+    color: white;
+    text-align: center;
+}
+
+.icon-bar {
+    display: flex;
+}
+
+.icon-bar a {
+    float: left;
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-bar a:hover {
+    background-color: #151a24;
+}
+
+.facebook {
+    background: #3B5998;
+}
+
+.twitter {
+    background: #55ACEE;
+}
+
+.google {
+    background: #dd4b39;
+}
+
+.linkedin {
+    background: #007bb5;
+}
+
+.youtube {
+    background: #bb0000;
+}

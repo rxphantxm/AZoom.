@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <meta charset="utf-8">
+    
+        <title>Vehicle Listing</title>
+    
+        <script src="https://kit.fontawesome.com/79eb1a849f.js" crossorigin="anonymous"></script>
+    
+        <!-- Arvo Font Import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    
+        <!-- YellowTail font import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+
+
+        <link rel="stylesheet" href="./css/rentCar.css">
+        <link rel="stylesheet" href="./css/popupLogin.css">
+        <link rel="stylesheet" href="./css/tNav_Footer.css">
+
+
+
+
+<style>
+
+
+
+</style>
+    
+    </head>
+
+
+
+    <body>
+
+
+        <div class="wrapper">
+
+
+        <div class="topNavBar">
+
+            <!--Profile Button-->
+            <button onmouseout="btnCollapse()" onmouseover="btnExpand()" onclick="profileDropDown()" class="profileButton" id="profileBTN" ><i class="fa-solid fa-user"></i></button>
+            <div id="dropDownMenu" class="dropdown-content">
+                <h3>Hello <span class="userName_Display">Guest</span></h3>
+                <hr>
+                <div class="login_logout">
+                <a id="btnToLogin" href="#">Login</a>
+                <a class="userLoggedinBTN" id="btnToLogout" href="#" onclick="logout()">LogOut</a>
+                <a class="userLoggedinBTN" id="btnToCheckBooking" href="userProfile.html">My Bookings</a>
+                </div>
+            </div>
+
+
+            <a class="rentBTN" id="toHome" href="index.html"><i class="fa-solid fa-house"></i></a>
+
+        </div>
+
+
+
+        <div class="vehicleRentalMainDiv">
+            <div class="vehicleFilterArea">
+
+                <h2>Vehicle Brands</h2>
+                <hr>
+            
+                <label class="container" for="hyundai">Hyundai
+                    <input type="checkbox" class="vehicleFilter" name="vehicleFilter" value="hyundai" id="hyundai">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container" for="saicMotor">SAIC Motor
+                    <input type="checkbox" class="vehicleFilter" name="vehicleFilter" value="saicMotor" id="saicMotor">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container" for="smart">SMART
+                    <input type="checkbox" class="vehicleFilter" name="vehicleFilter" value="smart" id="smart">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container" for="tesla">Tesla
+                    <input type="checkbox" class="vehicleFilter" name="vehicleFilter" value="tesla" id="tesla">
+                    <span class="checkmark"></span>
+                </label>
+
+
+
+            </div>
+
+            <div class="vehicleListingArea">
+                <ul class="vehicleList">
+                    <li>
+                        <div class="displayBox">
+                            <div class="desc">
+                                <h3 >Hyundai Kona</h3>
+                                <small>Electric</small>
+                            </div>
+
+                            <div>
+                                <img style="object-position: 28px 4px; width: 300px;" src="./image/kona2.png">
+                            </div>
+
+
+                            <div class="overlay">
+                                <div class="veh_desc">
+                                    <small>Max Range</small>
+                                    <p>452.00 KM</p>
+
+                                    <small>Capacity</small>
+                                    <p>5 Pax</p>
+
+                                    <small>Type</small>
+                                    <p>SUV</p>
+                                </div>
+
+                                <div class="bookBTNArea">
+                                    <a class="bookBTN" href="bookingPage.html">Book This Vehicle</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="displayBox">
+                            <div class="desc">
+                                <h3 >Hyundai Ioniq</h3>
+                                <small>Electric</small>
+                            </div>
+
+                            <div>
+                                <img style="object-position: 28px 4px; width: 270px;" src="./image/ionic2.png">
+                            </div>
+
+                            <div class="overlay">
+                                <div class="veh_desc">
+                                    <small>Max Range</small>
+                                    <p>250.00 KM</p>
+
+                                    <small>Capacity</small>
+                                    <p>5 Pax</p>
+
+                                    <small>Type</small>
+                                    <p>Sedan</p>
+                                </div>
+
+                                <div class="bookBTNArea">
+                                    <div class="disabled_bookBTN">Unavailable</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="displayBox">
+                            <div class="desc">
+                                <h3 >MG ZS</h3>
+                                <small>Electric</small>
+                            </div>
+
+                            <div>
+                                <img style="object-position: 28px 4px; width: 320px;" src="./image/mgzs2.png">
+                            </div>
+
+                            <div class="overlay">
+                                <div class="veh_desc">
+                                    <small>Max Range</small>
+                                    <p>461.00 KM</p>
+
+                                    <small>Capacity</small>
+                                    <p>5 Pax</p>
+
+                                    <small>Type</small>
+                                    <p>SUV</p>
+                                </div>
+
+                                <div class="bookBTNArea">
+                                    <div class="disabled_bookBTN">Unavailable</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="displayBox">
+                            <div class="desc">
+                                <h3 >ForTwo EQ Premium Cabrio</h3>
+                                <small>Electric</small>
+                            </div>
+
+                            <div style="transform: translate(0,-20px);">
+                                <img style="object-position: 28px 4px; width: 280px;" src="./image/forttwo2.png">
+                            </div>
+
+                            <div class="overlay">
+                                <div class="veh_desc">
+                                    <small>Max Range</small>
+                                    <p>95.00 KM</p>
+
+                                    <small>Capacity</small>
+                                    <p>2 Pax</p>
+
+                                    <small>Type</small>
+                                    <p>Compact</p>
+                                </div>
+
+                                <div class="bookBTNArea">
+                                    <div class="disabled_bookBTN">Unavailable</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+         <div class="footerItem">
+            <div class="icon-bar">
+                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="google"><i class="fa fa-google"></i></a>
+                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+            </div>
+            <h4>Not All Rights Reserved</h4>
+        </div>
+
+
+
+
+        <!---------------------------------------------------LOGIN POPUP FORM --------------------------------------------------->
+        <div class="popup">
+            <div class="card">
+              <div class="popup-content toLogIn">
+                        <div class="close"><i class="fa-brands fa-xing"></i></div>
+                        <h2>Lets Log In!</h2>
+                        <hr>
+            
+                        <form id="loginSignUpForm">
+                          <div class="usernameField"><i class="fa-solid fa-user"></i><input type="text" name="username" id="username" placeholder="Username"></div>
+                          <div class="passwordField"><i class="fa-solid fa-lock"></i><input type="password" name="password" id="password" placeholder="Password"></div>
+                          <a href="#" class="login_button" onclick="validate()">Log In</a>
+                        </form>
+            
+                        <a href="#" class="toFlip">No Account? Sign Up!</a>
+                      </div>
+              
+              <div class="popup-content toSignUp">
+                          <div class="close"><i class="fa-brands fa-xing"></i></div>
+                          <h2>Lets Sign Up!</h2>
+                          <hr>
+              
+                          <form id="loginSignUpForm">
+                              <div><i class="fa-solid fa-user"></i><input type="text" name="fullname" placeholder="Full Name"/></div>
+                              <div><i class="fa-solid fa-envelope"></i><input type="text" name="email" placeholder="Email"/></div>
+                              <div><i class="fa-solid fa-user"></i><input type="text" name="newAccUsername" placeholder="Username"/></div>
+                              <div><i class="fa-solid fa-lock"></i><input type="text" name="newAccPassword" placeholder="Password"/></div>
+                              <div><i class="fa-solid fa-lock"></i><input type="text" name="confirmpassword" placeholder="Confirm Password"/></div>
+                              <a href="#" class="signup_button">Sign Up</a>
+                           </form>
+              
+                          <a href="#" class="toFlip">I have an Account!</a>
+                      </div>
+            </div>
+          </div>
+           <!----------------------------------------------------------------------------------------------------------------------------->
+
+
+
+        </div>
+
+
+        <script>
+
+
+
+
+
+
+        </script>
+
+
+
+
+        <script src="./js/script.js"></script>
+        <script src="./js/loginPopup.js"></script>
+
+    </body>
+
+
+</html>

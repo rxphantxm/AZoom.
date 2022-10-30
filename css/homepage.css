@@ -1,0 +1,147 @@
+/* =================== mainNav Section ========================*/
+
+.mainNav {
+    position: relative;
+    background-color:#005aca;
+    background-image: linear-gradient(#151a24,#151a24, #005aca);    
+    /* Full height */
+    height: 85%;
+    }
+
+.bgImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+.mainNav .companyLogo {
+    height: 400px;
+    position: absolute;
+    padding-top: 100px;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    /*-webkit-box-reflect: below -20px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.05)); */
+}
+
+
+.navBTN {
+    font-family: 'Yellowtail', cursive;
+    font-size: 100px;
+    text-shadow: 0 0 5px black;
+}
+
+.aboutBTN{
+    position: absolute;
+    background-color: transparent;
+    color: rgb(104, 104, 104);
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 2px;
+    text-align: center;
+    text-decoration: none;
+    top: 35%;
+    right: 70%;
+    transition: all 0.3s;
+}
+
+.aboutBTN:hover {
+    color: rgb(235, 251, 255);
+    text-shadow: 0 0 5px black, 0 0 15px rgb(35, 210, 254);
+    -webkit-text-stroke-width: 0.5px;
+}
+
+.contactBTN {
+    position: absolute;
+    background-color: transparent;
+    color: rgb(104, 104, 104);
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 2px;
+    text-align: center;
+    text-decoration: none;
+    top: 35%;
+    left: 70%;
+    transition: all 0.3s;
+}
+
+.contactBTN:hover {
+    color: rgb(255, 241, 252);
+    text-shadow: 0 0 5px black, 0 0 15px rgb(253, 57, 210);
+    -webkit-text-stroke-width: 0.5px;
+}
+
+/* =================== ================= ========================*/
+
+
+
+
+
+/* ========================= ABOUT US ============================*/
+.aboutUsSectMain {
+    position: relative;
+    /*background-color: white; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#194d8e, #fff, #fff); 
+}
+
+.aboutUsSect {
+    padding: 50px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    width: 70%;
+}
+
+.aboutUsSect h2{
+    text-transform: uppercase;
+}
+
+.aboutUscarIMG{
+    position: absolute;
+    width: 900px;
+    height: 100%;
+    object-fit: cover;
+    background-position: right;
+    left: 50%;
+    z-index: -1;
+}
+
+/* =================== ================= ========================*/
+
+
+
+
+
+/* ========================= FIND US ============================*/
+
+.findUsMain {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+
+.findUsSect {
+    z-index: 2;
+    display: flex;
+}
+
+.findUsSect div {
+    flex: 50%;
+    padding: 15px;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+.desc {
+    transform: scale(120%);
+}
+
+
+
+
+/* =================== ================= ========================*/
+
+

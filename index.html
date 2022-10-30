@@ -1,0 +1,249 @@
+<!doctype html>
+
+<!--
+NOTES:
+
+-webkit-text-security: disc;  (mask text into dots)
+
+
+
+(Placed in parent container if choosing to show content in grid. e.g. 'ul' element to make 'li' show in grid)
+display: grid;
+grid-template-columns: 10px 20px 50px; (define how many 'li' element to show per row, and how wide they are. "auto" to allow auto sizing of width)
+grid-gap: 20px;
+
+(More specific setting instead of "grid-gap")
+grid-column-gap: 1.5rem;
+grid-row-gap: 1.5rem;
+
+
+
+-->
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Car Rental</title>
+
+        <script src="https://kit.fontawesome.com/79eb1a849f.js" crossorigin="anonymous"></script>
+
+        <!-- Arvo Font Import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+        <!-- YellowTail font import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+            
+body, html {
+    height: 100%;
+        }         
+
+
+</style>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="./css/homepage.css">
+        <link rel="stylesheet" href="./css/popupLogin.css">
+        <link rel="stylesheet" href="./css/tNav_Footer.css">
+        <link rel="stylesheet" href="./css/battery.css">
+
+    </head>
+
+    <body>
+
+
+
+
+        <div class="topNavBar">
+
+            <!--Profile Button-->
+            <button onmouseout="btnCollapse()" onmouseover="btnExpand()" onclick="profileDropDown()" class="profileButton" id="profileBTN" ><i class="fa-solid fa-user"></i></button>
+            <div id="dropDownMenu" class="dropdown-content">
+                <h3>Hello <span class="userName_Display">Guest</span></h3>
+                <hr>
+                <div class="login_logout">
+                <a id="btnToLogin" href="#">Login</a>
+                <a class="userLoggedinBTN" id="btnToLogout" href="#" onclick="logout()">LogOut</a>
+                <a class="userLoggedinBTN" id="btnToCheckBooking" href="userProfile.html">My Bookings</a>
+                </div>
+            </div>
+
+
+            <a class="rentBTN" id="toRent" href="rentCar.html">Rent A Car</i></a>
+
+            
+        </div>
+
+
+        <div class="mainNav">
+            <img class="bgImg" src="./image/eCar.jpg" alt = "charging electric car">
+            <img class="companyLogo" src="./image/AZoom.png" alt="companyLogo">
+            <div class="navBTN">
+                <a class="aboutBTN" href="#aboutUs">About Us</a>
+                <a class="contactBTN" href="#findUs">Find Us</a>
+            </div>
+        </div>
+
+
+
+        <div class="aboutUsSectMain">
+            <!--<img class="aboutUscarIMG" src="./image/electricCar1.jpeg" alt="electric car Hyundai">-->
+
+            <div class="aboutUsSect" id="aboutUs">
+
+
+                <h2>What do we have</h2>
+                <p>AZoom offers a smart, convenient, flexible and affordable mobility option to all Singaporeans, 
+                complementing public transport while reducing the need for car ownership. 
+                The service’s 100% electric fleet also provides a sustainable transport solution, eliminating direct carbon dioxide emissions as compared to traditional vehicles.</p>
+                <p>We have self-service charging stations located at our designated <a href="#">car park</a> in Singapore.</p>
+                <p>The service is available to anyone over 20 years of age with a minimum one year’s valid driver’s license.</p>
+            </div>
+
+
+            <div class="aboutUsSect">
+                <h2>The Techonology of our fleet</h2>
+                <p>We offer vehicle equipped with Lithium Metal Polymer (LMP®) batteries.</p>
+                <p>LMP® technology is the culmination of an ambitious research and development program started more than twenty years ago. 
+                    Made of thin films of material produced using extrusion techniques perfected by the Bolloré Group, 
+                    LMP® batteries offer high energy density while ensuring the safety of use. 
+                    They provide unrivalled autonomy and excellent performance in all weather conditions. 
+                    They are dry batteries (meaning “entirely solid”), which gives them numerous advantages, particularly in terms of safety. 
+                    Solid electrolytes effectively reduce local pollution risks in the event of an accident or damage to the integrity of the battery pack. 
+                    The LMP® batteries contain no solvents, no rare earth metals, and no cobalt.</p>
+                <p>These batteries can fulfill the needs of many different markets and meet the two primary challenges of the energy transition: developing clean transportation and smart energy management.</p>
+            </div>
+
+        </div>
+
+
+        <div id="findUs" class="findUsMain">
+            <div class="findUsSect">
+                <div class="desc">
+                    <h2>AZoom Car Rental, Serangoon North</h2>
+                    <p>+65 63857294</p>
+                    <p>9A Serangoon North Ave 5, #01-01, Singapore 554500</p>
+                </div>
+
+                <div>
+                    <iframe class="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15954.673824454272!2d103.86029323474077!3d1.37560828552159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da16588a2b2baf%3A0x806f8e7e949612c7!2sSingapore%20554500!5e0!3m2!1sen!2ssg!4v1666707777080!5m2!1sen!2ssg" width="700" height="300" style="border:0;border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            
+
+            <div class="findUsSect">
+                <div class="desc">
+                    <h2>AZoom Car Rental, Toa Payoh</h2>
+                    <p>+65 60386724</p>
+                    <p>5 Toa Payoh W, #04-02 Motorway Building, Singapore 318877</p>
+                </div>
+
+
+                
+                <div>
+                    <iframe class="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15954.94018762209!2d103.83292323474248!3d1.3351803863511424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da175cdfbf542f%3A0x7fd0db09ca9e9d4d!2sSingapore%20318877!5e0!3m2!1sen!2ssg!4v1666708306485!5m2!1sen!2ssg" width="700" height="300" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                
+                
+            </div>
+            
+            
+
+        </div>
+
+
+
+        <div class="footerItem">
+            <div class="icon-bar">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="google"><i class="fa fa-google"></i></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="youtube"><i class="fa fa-youtube"></i></a>
+            </div>
+            <h4>Not All Rights Reserved</h4>
+        </div>
+
+
+
+
+
+
+        <!---------------------------------------------------LOGIN POPUP FORM --------------------------------------------------->
+        <div class="popup">
+            <div class="card">
+              <div class="popup-content toLogIn">
+                        <div class="close"><i class="fa-brands fa-xing"></i></div>
+                        <h2>Lets Log In!</h2>
+                        <hr>
+            
+                        <form id="loginSignUpForm">
+                          <div class="usernameField"><i class="fa-solid fa-user"></i><input type="text" name="username" id="username" placeholder="Username"></div>
+                          <div class="passwordField"><i class="fa-solid fa-lock"></i><input type="password" name="password" id="password" placeholder="Password"></div>
+                          <a href="#" class="login_button" onclick="validate()">Log In</a>
+                        </form>
+            
+                        <a href="#" class="toFlip">No Account? Sign Up!</a>
+                      </div>
+              
+              <div class="popup-content toSignUp">
+                          <div class="close"><i class="fa-brands fa-xing"></i></div>
+                          <h2>Lets Sign Up!</h2>
+                          <hr>
+              
+                          <form id="loginSignUpForm">
+                              <div><i class="fa-solid fa-user"></i><input type="text" name="fullname" placeholder="Full Name"/></div>
+                              <div><i class="fa-solid fa-envelope"></i><input type="text" name="email" placeholder="Email"/></div>
+                              <div><i class="fa-solid fa-user"></i><input type="text" name="newAccUsername" placeholder="Username"/></div>
+                              <div><i class="fa-solid fa-lock"></i><input type="text" name="newAccPassword" placeholder="Password"/></div>
+                              <div><i class="fa-solid fa-lock"></i><input type="text" name="confirmpassword" placeholder="Confirm Password"/></div>
+                              <a href="#" class="signup_button">Sign Up</a>
+                           </form>
+              
+                          <a href="#" class="toFlip">I have an Account!</a>
+                      </div>
+            </div>
+          </div>
+           <!----------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+        <script>
+        
+        /*
+        function btnExpand(x){
+            document.getElementById("profileBTN").innerHTML = "Profile";
+        }
+
+        function btnCollapse(){
+            document.getElementById("profileBTN").innerHTML = "";
+        }
+        */
+
+        
+        </script>
+        <!-- Load external JavaScript -->
+        <script src="./js/script.js"></script>
+        <script src="./js/loginPopup.js"></script>
+        
+    </body>
+
+
+</html>

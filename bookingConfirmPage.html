@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <meta charset="utf-8">
+    
+        <title>Booking Confirmation</title>
+    
+        <script src="https://kit.fontawesome.com/79eb1a849f.js" crossorigin="anonymous"></script>
+    
+        <!-- Arvo Font Import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    
+        <!-- YellowTail font import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="./css/bookingConfirmPage.css">
+        <link rel="stylesheet" href="./css/bookingPage.css">
+        <link rel="stylesheet" href="./css/popupLogin.css">
+        <link rel="stylesheet" href="./css/tNav_Footer.css">
+
+
+
+
+<style>
+
+
+
+
+
+</style>
+    
+    </head>
+
+
+
+    <body>
+
+
+
+
+      <div class = "wrapper">
+
+        <div class="topNavBar">
+
+            <!--Profile Button-->
+            <button onmouseout="btnCollapse()" onmouseover="btnExpand()" onclick="profileDropDown()" class="profileButton" id="profileBTN" ><i class="fa-solid fa-user"></i></button>
+            <!--<div id="dropDownMenu" class="dropdown-content">
+                <a href="#" id="btnToLogin">Login</a>
+            </div>-->
+
+
+            <a class="rentBTN" id="toRent" href="rentCar.html"><i class="fa-solid fa-car"></i></a>
+
+        </div>
+
+
+
+
+
+        <div class="bookingPageArea">
+        
+          <div class="vehicleSummary">
+        
+            <img style="object-position: 28px 4px; width: 300px;" src="./image/kona2.png">
+            <h2>Hyundai Kona</h2>
+            <h3>452.00KM <svg style="height:1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM320 352c0-26.9-16.5-49.9-40-59.3V88c0-13.3-10.7-24-24-24s-24 10.7-24 24V292.7c-23.5 9.5-40 32.5-40 59.3c0 35.3 28.7 64 64 64s64-28.7 64-64zM144 176c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32zm-16 80c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zm288 32c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32zM400 144c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z" />
+              </svg></h3>
+            <h3>5 <svg style="height:1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M208 48c0 26.5-21.5 48-48 48s-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48zM152 352V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V256.9L59.4 304.5c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l58.3-97c17.4-28.9 48.6-46.6 82.3-46.6h29.7c33.7 0 64.9 17.7 82.3 46.6l58.3 97c9.1 15.1 4.2 34.8-10.9 43.9s-34.8 4.2-43.9-10.9L232 256.9V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V352H152z" />
+              </svg></h3>
+            <h3>SUV <svg style="height:1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M135.2 117.4L109.1 192H402.9l-26.1-74.6C372.3 104.6 360.2 96 346.6 96H165.4c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32H346.6c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2V400v48c0 17.7-14.3 32-32 32H448c-17.7 0-32-14.3-32-32V400H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V400 256c0-26.7 16.4-49.6 39.6-59.2zM128 288c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zm288 32c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32z" />
+              </svg></h3>
+        
+        
+          </div><!--end div for vehicleSummary -->
+        
+        
+        
+        
+          <div class="bookingWindow">
+            <form class="bookingForm" action="#">
+              <h3>Pickup Location</h3>
+              <p>Ang Mo Kio Branch</p>
+        
+        
+              <div class="dateTimeforPickUp_Return">
+                <h3>Pick-up Date</h3>
+                <p>18/11/2022, 12:30PM</p>
+              </div>
+        
+              <div class="dateTimeforPickUp_Return">
+                <h3>Return Date</h3>
+                <p>18/11/2022, 06:30PM</p>
+              </div>
+        
+  
+            </form>
+          </div><!--end div for bookingWindow -->
+        
+
+
+
+
+
+          <div class="paymentNbilling_MainWindow">
+            <form>
+            
+              <div class="paymentNbillingSection">
+                <div class="billing">
+                  <h3>Billing Address</h3>
+                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                  <p id="fname" name="firstname" >Doe, John</p>
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <p id="email" name="email">johndoe34@yahoo.com</p>
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                  <label for="city"><i class="fa fa-institution"></i> City</label>
+                  <input type="text" id="city" name="city" placeholder="New York">
+              
+                  <div class="zipNstate">
+                    <div>
+                      <label for="state">State</label>
+                      <input type="text" id="state" name="state" placeholder="NY">
+                    </div>
+                    <div>
+                      <label for="zip">Zip</label>
+                      <input type="text" id="zip" name="zip" placeholder="10001">
+                    </div>
+                  </div>
+                </div>
+            
+
+                <div class="payment">
+                  <h3>Payment</h3>
+                  <label for="fname">Accepted Cards</label>
+                  <div class="icon-container">
+                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                  </div>
+                  <label for="cname">Name on Card</label>
+                  <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                  <label for="ccnum">Credit card number</label>
+                  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                  
+                  <div class="cardExpiry_CVV">
+                    <div>
+                      <label for="expmonth">Exp Month</label>
+                      <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                    </div>
+                    <div>
+                      <label for="expyear">Exp Year</label>
+                      <input type="text" id="expyear" name="expyear" placeholder="2018">
+                    </div>
+                    <div>
+                      <label for="cvv">CVV</label>
+                      <input type="text" id="cvv" name="cvv" placeholder="352">
+                    </div>
+                  </div>
+
+                  <a href="#" id="checkoutBTN" >Proceed to Checkout!</a>
+                </div>
+
+              </div><!--end div for paymentNbillingSection -->
+            
+            
+            </form>
+          </div><!--end div for paymentNbilling_Window -->
+        </div><!--end div for bookingPageArea -->
+        
+      
+
+
+
+
+
+         <!---------------------------------------------------Popup confirmation Window --------------------------------------------------->
+         <div class="popupConfirmationOverlay">
+          <div class="popupConfirmation-content">
+            <h2>Your Booking Summary</h2>
+            <hr>
+
+            <div class="bookingSummary">
+              <div>
+                <small>Vehicle Booked: </small> <h3>Hyundai Kona</h3>
+                <small>Pickup Location: </small> <h3>Ang Mo Kio Branch</h3>
+              </div>
+              <div>
+                <small>Duration: </small> <h3>18/11/2022, 12:30PM   to    18/11/2022, 06:30PM</h3>
+                <small>Total Amt Payable: </small> <h3>$120.00 SGD</h3>
+              </div>
+            </div>
+
+            <div class="confirmationBTN">
+              <a class="cancel" href="rentCar.html" onclick="closeSummary()">Cancel</a>
+              <a class="pay" href="index.html" onclick="closeSummary()">Pay & Book Now!</a>
+            </div>
+          </div>
+        </div>
+         <!----------------------------------------------------------------------------------------------------------------------------->
+
+
+
+        <div class="footerItem">
+            <div class="icon-bar">
+                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="google"><i class="fa fa-google"></i></a>
+                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+            </div>
+            <h4>Not All Rights Reserved</h4>
+        </div>
+
+
+
+
+
+
+
+      </div> <!--end div for Wrapper -->
+      
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+        <script>
+           
+        </script>
+
+
+
+
+
+
+
+      <script src="./js/bookingConfirmPage.js"></script>
+      <script src="./js/loginPopup.js"></script>
+
+    </body>
+
+
+</html>
