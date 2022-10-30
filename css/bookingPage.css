@@ -1,4 +1,7 @@
 .bookingPageArea{
+    background-color: #dddddd;
+    padding: 20px 40px;
+    border-radius: 20px;
     display:flex;
     justify-content:center;
     align-items: center;
